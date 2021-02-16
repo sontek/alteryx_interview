@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api:
+    build:
+      target: dev
+      context: ./api/
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./api/:/srv"
+
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+
